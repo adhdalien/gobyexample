@@ -32,3 +32,5 @@ tasks:
   constants: go run cmd/constants/main.go
 
   for: go run cmd/for/main.go
+
+  ifelse: go run cmd/ifelse/main.go
