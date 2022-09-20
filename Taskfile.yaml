@@ -41,3 +41,5 @@ tasks:
   slices: go run cmd/slices/main.go
 
   maps: go run cmd/maps/main.go
+
+  range: go run cmd/range/main.go
