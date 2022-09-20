@@ -30,3 +30,5 @@ tasks:
   variables: go run cmd/variables/main.go
 
   constants: go run cmd/constants/main.go
+
+  for: go run cmd/for/main.go

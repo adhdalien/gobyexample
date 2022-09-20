@@ -5,17 +5,16 @@ Learning Go with https://gobyexample.com
 
 Each chapter in the project is separated into its own file in the `src` directory and they are run using the `task` command provided by [taskfile.dev](https://taskfile.dev).
 
-Starting a new chapter:
+**Starting a new chapter:**
 
 ```
 ➜ NAME=chapterName task newchap
 ```
 
+**Finishing a chapter:**
+
 ```
-➜ task -l
-task: Available tasks for this project:
-* endchap: 	Finish a chapter, commit and merge to main
-* newchap: 	Creates a new chapter folder and main file
+➜ NAME=chapterName task endchap -- "Commit message"
 ```
 
 ## Workflow
