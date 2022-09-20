@@ -24,34 +24,7 @@ tasks:
       - git push
     silent: true
 
-  helloworld: go run cmd/helloworld/main.go
-    
-  values: go run cmd/values/main.go
-    
-  variables: go run cmd/variables/main.go
-
-  constants: go run cmd/constants/main.go
-
-  for: go run cmd/for/main.go
-
-  ifelse: go run cmd/ifelse/main.go
-
-  switch: go run cmd/switch/main.go
-
-  arrays: go run cmd/arrays/main.go
-
-  slices: go run cmd/slices/main.go
-
-  maps: go run cmd/maps/main.go
-
-  range: go run cmd/range/main.go
-
-  functions: go run cmd/functions/main.go
-
-  closures: go run cmd/closures/main.go
-
-  recursion: go run cmd/recursion/main.go
-
-  pointers: go run cmd/pointers/main.go
-
-  stringsandrunes: go run cmd/stringsandrunes/main.go
+  chap:
+    desc: Runs the code of a given chapter
+    cmds:
+      - go run cmd/{{.CLI_ARGS}}/main.go
