@@ -27,3 +27,5 @@ tasks:
   values: go run cmd/values/main.go
     
   variables: go run cmd/variables/main.go
+
+  constants: go run cmd/constants/main.go
