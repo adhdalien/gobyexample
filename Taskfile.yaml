@@ -6,5 +6,11 @@ tasks:
   helloworld:
     desc: Hello world
     cmds:
-      - go run src/hello-world.go
+      - go run cmd/helloworld/main.go
+    silent: true
+  
+  values:
+    desc: Values chapter
+    cmds:
+      - go run cmd/values/main.go
     silent: true
