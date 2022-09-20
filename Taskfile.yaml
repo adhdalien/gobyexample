@@ -6,13 +6,13 @@ tasks:
   newchap:
     desc: Creates a new chapter folder and main file
     cmds:
-      - git checkout -b {{.NAME}}
-      - mkdir cmd/{{.NAME}}
-      - touch cmd/{{.NAME}}/main.go
-      - echo "// cmd/{{.NAME}}/main.go" >> cmd/{{.NAME}}/main.go
-      - echo "package main" >> cmd/{{.NAME}}/main.go
-      - echo "" >> cmd/{{.NAME}}/main.go
-      - echo "func main() {}" >> cmd/{{.NAME}}/main.go
+      - git checkout -b {{.CLI_ARGS}}
+      - mkdir cmd/{{.CLI_ARGS}}
+      - touch cmd/{{.CLI_ARGS}}/main.go
+      - echo "// cmd/{{.CLI_ARGS}}/main.go" >> cmd/{{.CLI_ARGS}}/main.go
+      - echo "package main" >> cmd/{{.CLI_ARGS}}/main.go
+      - echo "" >> cmd/{{.CLI_ARGS}}/main.go
+      - echo "func main() {}" >> cmd/{{.CLI_ARGS}}/main.go
   
   endchap:
     desc: Finish a chapter, commit and merge to main
@@ -24,7 +24,7 @@ tasks:
       - git push
     silent: true
 
-  chap:
+  runchap:
     desc: Runs the code of a given chapter
     cmds:
       - go run cmd/{{.CLI_ARGS}}/main.go
