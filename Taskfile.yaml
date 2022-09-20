@@ -19,6 +19,7 @@ tasks:
       - git commit -S -s -m {{.CLI_ARGS}}
       - git checkout main
       - git merge {{.NAME}}
+      - git push
     silent: true
 
 
