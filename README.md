@@ -13,6 +13,12 @@ Each commit is signed and verified with a GPG key.
 
 ```
 ➜ NAME=chapterName task newchap
+task: [newchap] git checkout -b chapterName
+Switched to a new branch 'chapterName'
+task: [newchap] mkdir cmd/chapterName
+task: [newchap] touch cmd/chapterName/main.go
+task: [newchap] echo "package main" >> cmd/chapterName/main.go
+task: [newchap] echo "func main() {}" >> cmd/chapterName/main.go
 ```
 
 **Finishing a chapter:**

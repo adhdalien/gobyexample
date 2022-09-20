@@ -10,7 +10,7 @@ tasks:
       - mkdir cmd/{{.NAME}}
       - touch cmd/{{.NAME}}/main.go
       - echo "package main" >> cmd/{{.NAME}}/main.go
-      - echo "func main() {}" >> cmd//{{.NAME}}/main.go
+      - echo "func main() {}" >> cmd/{{.NAME}}/main.go
 
   endchap:
     desc: Finish a chapter, commit and merge to main
@@ -39,3 +39,5 @@ tasks:
   arrays: go run cmd/arrays/main.go
 
   slices: go run cmd/slices/main.go
+
+  maps: go run cmd/maps/main.go
