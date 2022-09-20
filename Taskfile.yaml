@@ -3,14 +3,25 @@
 version: '3'
 
 tasks:
-  helloworld:
-    desc: Hello world
+  newchap:
+    desc: Creates a new chapter folder and main file
     cmds:
-      - go run cmd/helloworld/main.go
-    silent: true
-  
-  values:
-    desc: Values chapter
+      - git checkout -b {{.NAME}}
+      - mkdir cmd/{{.NAME}}
+      - touch cmd/{{.NAME}}/main.go
+      - echo "package main" >> cmd/{{.NAME}}/main.go
+      - echo "func main() {}" >> cmd//{{.NAME}}/main.go
+
+  endchap:
+    desc: Finish a chapter, commit and merge to main
     cmds:
-      - go run cmd/values/main.go
+      - git add .
+      - git commit -S -s -m {{.CLI_ARGS}}
     silent: true
+
+
+  helloworld: go run cmd/helloworld/main.go
+    
+  values: go run cmd/values/main.go
+    
+  variables: go run cmd/variables/main.go
