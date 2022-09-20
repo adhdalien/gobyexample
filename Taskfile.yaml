@@ -43,3 +43,5 @@ tasks:
   maps: go run cmd/maps/main.go
 
   range: go run cmd/range/main.go
+
+  functions: go run cmd/functions/main.go
