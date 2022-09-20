@@ -12,7 +12,7 @@ Each commit is signed and verified with a GPG key.
 **Starting a new chapter:**
 
 ```
-➜ NAME=chapterName task newchap
+➜ task newchap -- chapterName
 task: [newchap] git checkout -b chapterName
 Switched to a new branch 'chapterName'
 task: [newchap] mkdir cmd/chapterName
@@ -27,14 +27,17 @@ task: [newchap] echo "func main() {}" >> cmd/chapterName/main.go
 ➜ NAME=chapterName task endchap -- "Commit message"
 ```
 
-## Taskfile commands
+**Running the code for a specific chapter:**
 
-Each chapter is run with the `task` command and needs to be defined in the `Taskfile.yaml` file using the following format:
-
-```yaml
-  values:
-    desc: Chapter description
-    cmds:
-      - go run cmd/chapterName/main.go
-    silent: true
+```
+➜ task runchap -- structs
+task: [runchap] go run cmd/structs/main.go
+{Bob 20}
+{Alice 30}
+{Fred 0}
+&{Ann 40}
+&{Jon 42}
+Sean
+50
+51
 ```
