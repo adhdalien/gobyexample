@@ -35,3 +35,5 @@ tasks:
   ifelse: go run cmd/ifelse/main.go
 
   switch: go run cmd/switch/main.go
+
+  arrays: go run cmd/arrays/main.go
