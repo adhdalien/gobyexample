@@ -1,0 +1,13 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  hello:
+    desc: Simple greeting message
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
