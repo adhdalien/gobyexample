@@ -2,12 +2,9 @@
 
 version: '3'
 
-vars:
-  GREETING: Hello, World!
-
 tasks:
-  hello:
-    desc: Simple greeting message
+  helloworld:
+    desc: Hello world
     cmds:
-      - echo "{{.GREETING}}"
+      - go run src/hello-world.go
     silent: true
