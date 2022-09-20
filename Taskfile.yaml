@@ -14,7 +14,7 @@ tasks:
       - echo "" >> cmd/{{.NAME}}/main.go
       - echo "func main() {}" >> cmd/{{.NAME}}/main.go
       - echo "" >> Taskfile.yaml
-      - echo "  {{.NAME}}: go run cmd/{{.NAME}}/main.go"
+      - echo "  {{.NAME}}: go run cmd/{{.NAME}}/main.go" >> Taskfile.yaml
   
   endchap:
     desc: Finish a chapter, commit and merge to main
@@ -53,3 +53,5 @@ tasks:
   closures: go run cmd/closures/main.go
 
   recursion: go run cmd/recursion/main.go
+
+  pointers: go run cmd/pointers/main.go
