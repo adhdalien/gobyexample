@@ -45,3 +45,5 @@ tasks:
   range: go run cmd/range/main.go
 
   functions: go run cmd/functions/main.go
+
+  closures: go run cmd/closures/main.go
