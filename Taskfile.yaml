@@ -22,7 +22,6 @@ tasks:
       - git push
     silent: true
 
-
   helloworld: go run cmd/helloworld/main.go
     
   values: go run cmd/values/main.go
@@ -34,3 +33,5 @@ tasks:
   for: go run cmd/for/main.go
 
   ifelse: go run cmd/ifelse/main.go
+
+  switch: go run cmd/switch/main.go
