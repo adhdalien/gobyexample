@@ -9,9 +9,13 @@ tasks:
       - git checkout -b {{.NAME}}
       - mkdir cmd/{{.NAME}}
       - touch cmd/{{.NAME}}/main.go
+      - echo "// cmd/{{.NAME}}/main.go" >> cmd/{{.NAME}}/main.go
       - echo "package main" >> cmd/{{.NAME}}/main.go
+      - echo "" >> cmd/{{.NAME}}/main.go
       - echo "func main() {}" >> cmd/{{.NAME}}/main.go
-
+      - echo "" >> Taskfile.yaml
+      - echo "  {{.NAME}}: go run cmd/{{.NAME}}/main.go"
+  
   endchap:
     desc: Finish a chapter, commit and merge to main
     cmds:
@@ -47,3 +51,5 @@ tasks:
   functions: go run cmd/functions/main.go
 
   closures: go run cmd/closures/main.go
+
+  recursion: go run cmd/recursion/main.go
