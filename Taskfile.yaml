@@ -13,8 +13,6 @@ tasks:
       - echo "package main" >> cmd/{{.NAME}}/main.go
       - echo "" >> cmd/{{.NAME}}/main.go
       - echo "func main() {}" >> cmd/{{.NAME}}/main.go
-      - echo "" >> Taskfile.yaml
-      - echo "  {{.NAME}}: go run cmd/{{.NAME}}/main.go" >> Taskfile.yaml
   
   endchap:
     desc: Finish a chapter, commit and merge to main
@@ -55,3 +53,5 @@ tasks:
   recursion: go run cmd/recursion/main.go
 
   pointers: go run cmd/pointers/main.go
+
+  stringsandrunes: go run cmd/stringsandrunes/main.go
