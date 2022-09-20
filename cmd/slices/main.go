@@ -69,4 +69,8 @@ func main() {
 
 	// Note that while slices are different types than arrays, they are rendered
 	// similarly by fmt.Println.
+
+	// Check out this great blog post by the Go team for more details on the
+	// design and implementation of slices in Go:
+	// https://go.dev/blog/slices-intro
 }
