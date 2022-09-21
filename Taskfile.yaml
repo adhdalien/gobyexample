@@ -26,5 +26,12 @@ tasks:
 
   runchap:
     desc: Runs the code of a given chapter
+    dir: cmd/{{.CLI_ARGS}}
     cmds:
-      - go run cmd/{{.CLI_ARGS}}/main.go
+      - go run main.go
+
+  testchap:
+    desc: Runs tests for a given chapter
+    dir: cmd/{{.CLI_ARGS}}
+    cmds:
+      - go test -v
